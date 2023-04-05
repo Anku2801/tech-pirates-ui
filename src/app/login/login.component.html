@@ -1,0 +1,32 @@
+<div class="row custom_body">
+  <img src="/assets/img/circle.svg" class="card-img-absolute" alt="circle-image">
+    <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3" Style="margin: auto;">
+      <h3 class="text-center" style="padding-bottom: 30px; color: white; font-weight: 500;">{{props.APP_Name}}</h3>
+      <div class="card auth">
+        <div class="card-body auth-card">
+          <div class="auth-avatar">
+            <img src="assets/img/user.jpeg" alt="user" class="user-image">
+          </div>
+          <form [formGroup]="loginForm" autocomplete="off" >
+            <div *ngIf="errorMsg" class="login-error"><span>{{errorMsg}}!</span></div>
+            <div class="form-group">
+             <div style="display:inline-flex;width:100%"> 
+              <div class="glyphicon glyphicon-user" style="color:white;margin-top: 4%;"></div>
+              <input type="text" formControlName="userEmail" class="form-control input-my" maxlength="35" [ngClass]="{ 'is-invalid': submitted && f.userEmail.errors }" placeholder="{{props.USER_DETAILS.USER_LOGIN_EMAIL}}" />
+             </div>        
+            </div>
+            <div class="form-group">
+              <div style="display:inline-flex;width:100%"> 
+              <div class="glyphicon glyphicon-lock" style="color:white;margin-top: 4%;"></div>
+              <input type="password" formControlName="userPassword" class="form-control input-my" maxlength="15" [ngClass]="{ 'is-invalid': submitted && f.userPassword.errors }" placeholder="Password"/>
+              </div>
+            </div>
+            <br>
+            <div class="text-center">
+              <button type="submit" class="btn btn-my111 btn-warning btn-fill" [disabled]="!this.loginForm.valid" (click)="onSubmit()"><strong>Login</strong></button>
+            </div>
+          </form>          
+        </div>
+      </div>
+    </div>
+  </div>

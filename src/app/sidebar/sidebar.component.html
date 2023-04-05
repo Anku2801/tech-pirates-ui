@@ -1,0 +1,59 @@
+
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a [routerLink]="[menuItems[0].path]" class="simple-text">
+            <div class="logo-img">
+                <i class="glyphicon glyphicon-list-alt"></i>
+            </div>
+            {{props.SIDEBAR_APP_Name}}
+        </a>
+    </div>
+    <ul class="nav responsive-nav">
+        <li *ngIf="isMobileMenu()">
+            <a (click)="logout()">
+                <p>{{props.MENUS.LOGOUT}}</p>
+            </a>
+        </li>
+        <li class="separator hidden-lg hidden-md" *ngIf="isMobileMenu()"></li>
+        
+                
+            <!-- <ul class="list-unstyled components">
+                <p>MENUS</p>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Dashboard</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li><a href="#">Dashboard1</a></li>
+                        <li><a href="#">Dashboard2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Users</a></li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Subscribers</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li><a href="#">Active</a></li>
+                        <li><a href="#">Idle</a></li>
+                        <li><a href="#">Non Active</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Timeline</a></li>
+            </ul> -->
+        <!-- <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+            <a [routerLink]="[menuItem.path]" *ngIf="menuItem.title != 'Typography'">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+            <a *ngIf="menuItem.title == 'Typography'" href="#foodSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            DropDown MENU</a>
+            <ul class="collapse lisst-unstyled" id="foodSubmenu">
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Script</a></li>
+            </ul>
+        </li>    -->
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+            <a  [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

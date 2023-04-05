@@ -1,0 +1,150 @@
+/* You can add global styles to this file, and also import other style files */
+.form-control {
+    border: 1px solid #B3B6B7 !important;
+}
+form input.ng-touched.ng-invalid {
+    border: 1px solid red !important;
+}
+.card label, .card span {
+    color: #1e1717;
+    font-weight: 200;
+    font-size: 12px;
+}
+.sidebar .nav li.active>a, .bootstrap-navbar .nav li.active>a {
+    opacity: 1;
+    background: #ff9500e8 !important;
+}
+.ps__thumb-y {
+    display: none;
+}
+label .text-danger {
+    font-size: 16px;
+}
+.alert {
+    height:55px;    
+ }
+ .alert-success {
+    background: #049f0c;
+ }
+ .alert span{
+    margin-top:10px;    
+ }
+ .home-card .card-action i, a:hover { cursor: pointer; }
+.table-responsive {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+    text-align:center;
+}
+.table>thead>tr>th {
+    font-size: 1em;
+    line-height: 1.42657143 !important;;
+    font-weight: 400;
+    text-align:center;
+    color: black;
+    background: #ddd;
+    height: 40px;
+}
+.dataTables_wrapper {
+    font-size: 12px;
+}
+.table-responsive .dataTables_wrapper .dataTables_length { margin-top: 5px; }
+.hide { display: none; }
+.show { display: block; }
+.table-responsive .dataTables_filter {
+    padding-bottom: 20px;
+    margin-right: -20px;
+}
+.table-responsive table { margin-bottom: 20px; }
+.table-responsive .dataTables_filter input { height: 33px; }
+.table-responsive .dt-buttons { float: left; }
+.table-responsive .float-end { margin-left: 15px; }
+#add-user label, #update-user label, #add-dataset label { padding-left: 12%; }
+.notAuthorized p {
+    margin-top: 40%;
+    color: white;
+}
+.custom_body {
+    background: linear-gradient(60deg,#f4b14f,#d900fb);
+    height:100vh;
+    width:100%;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;flex-wrap:wrap;background-repeat:no-repeat;background-size:cover;position:relative;z-index:1;
+    
+}
+.custom_body::before {content:"";display:block;position:absolute;z-index:-1;width:100%;height:100%;top:0;left:0;background-color:rgba(255,255,255,.1);/*rgba(179, 179, 179, 0.9)*/}
+.sidebar .logo-img, .bootstrap-navbar .logo-img {
+    width: 20px !important;
+    margin-right: 0 !important;
+}
+.card .card-header.card-header-tabs .nav-tabs {
+    background: 0 0;
+    padding: 0;
+}
+.card .card-header-primary .card-icon, .card .card-header-primary .card-text, .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .card.bg-primary, .card.card-rotate.bg-primary .back, .card.card-rotate.bg-primary .front {
+    background: linear-gradient(60deg,#ab47bc,#8e24aa);
+}
+.card .card-header-primary .card-icon, .card .card-header-primary .card-text, .card .card-header-primary:not(.card-header-icon):not(.card-header-text) {
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(156,39,176,.4);
+}
+.card .card-header-warning .card-icon, .card .card-header-warning .card-text, .card .card-header-warning:not(.card-header-icon):not(.card-header-text), .card.bg-warning, .card.card-rotate.bg-warning .back, .card.card-rotate.bg-warning .front {
+    background: linear-gradient(60deg,#f4b14f,#fb8c00);
+}
+.card .card-header-warning .card-icon, .card .card-header-warning .card-text, .card .card-header-warning:not(.card-header-icon):not(.card-header-text) {
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(255,152,0,.4);
+}
+.card [class*=card-header-]:not(.card-header-icon):not(.card-header-text):not(.card-header-image) {
+    border-radius: 3px;
+    margin-top: -20px;
+    padding: 15px;
+}
+.card [class*=card-header-] {
+    margin: 0 15px;
+    position: relative;
+}
+.card .card-header {
+    border-bottom: none;
+    z-index: 3 !important;
+}
+.card .avatar {
+    width: 30px !important;
+    height: 30px !important;
+}
+.card {
+    border: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+}
+.search-app-details span, .search-app-details label {
+    font-size: 1.50em;
+    color: #777;
+}
+.sub-app-details span, .sub-app-details label {
+    font-size: 1.25em;
+    color: #777;
+    padding-top: 10px;
+}
+.sub-app-details label {
+    font-size: 1.02em;
+    color: #777;
+    padding-top: 10px;
+}
+.dataTables_wrapper {
+    padding-left: 65px; 
+    padding-right: 65px;
+    padding-top: 15px;
+}
+.sub-hide {
+    display: none;
+}

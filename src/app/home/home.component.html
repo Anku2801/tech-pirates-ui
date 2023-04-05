@@ -1,0 +1,112 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row home-card">
+            <div class="col-sm-3">
+                <div class="card home-card1">
+                    <img src="/assets/img/circle.svg" class="card-img-absolute" alt="circle-image">
+                    <h4 class="card-title">{{props.HOME.USERS}} <i class="glyphicon glyphicon-user card-title-icon"></i></h4>
+                    <div class="card-action">
+                        <div class="float-left"><i class="glyphicon glyphicon-plus-sign"  routerLink="/add-user"> {{props.HOME.ADD_BTN}} </i></div>
+                        <div class="float-right"><i class="glyphicon glyphicon-search"  routerLink="/user-list"> {{props.HOME.LIST_BTN}}</i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card home-card2">
+                    <img src="/assets/img/circle.svg" class="card-img-absolute" alt="circle-image">
+                    <h4 class="card-title">{{props.HOME.DATASET}} <i class="glyphicon glyphicon-book card-title-icon"></i></h4>
+                    <div class="card-action">
+                        <div class="float-left"><i class="glyphicon glyphicon-plus-sign"  routerLink="/add-dataset"> {{props.HOME.ADD_BTN}} </i></div>
+                        <div class="float-right"><i class="glyphicon glyphicon-search"  routerLink="/dataset-list"> {{props.HOME.LIST_BTN}}</i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card home-card3">
+                    <img src="/assets/img/circle.svg" class="card-img-absolute" alt="circle-image">
+                    <h4 class="card-title">Welcome, {{currentUserName}} <img style="float: right;" alt="#" class="avatar border-gray" src="assets/img/user.jpeg"></h4>
+                    <div class="card-action">
+                        <div class="float-left">({{currentUserEmail}})</div>
+                        <div class="float-right">Today is : {{currentDateTime}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <h5 style="color: white;">{{props.HOME.RECENT_ACTIVITIES}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="text-danger glyphicon glyphicon-search"></i>
+                                    </td>
+                                    <td>
+                                        Sign contract for "What are conference organizers afraid of?"
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="text-success glyphicon glyphicon-search"></i>
+                                    </td>
+                                    <td>
+                                        Sign contract for "What are conference organizers afraid of?"
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </td>
+                                    <td>
+                                        Sign contract for "What are conference organizers afraid of?"
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </td>
+                                    <td>
+                                        Sign contract for "What are conference organizers afraid of?"
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </td>
+                                    <td>
+                                        Sign contract for "What are conference organizers afraid of?"
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-warning">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <h5 style="color: white;">{{props.HOME.DATASET_STATISTICS}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div style="width: 234px; height: 234px; margin: auto; margin-top: 10px; margin-bottom: 30px;">
+                            <canvas id="piechart"></canvas>
+                            <small><strong>Total No. of Datasets in the form of Ratio</strong></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

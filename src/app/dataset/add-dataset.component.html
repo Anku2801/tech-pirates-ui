@@ -1,0 +1,53 @@
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="content">
+                        <form id="add-dataset" [formGroup]="addDatasetForm">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3">{{props.DATASET_DETAILS.DATASET_APP_NAME}} <span class="text-danger">*</span></label>
+                                        <div class="col-sm-6">
+                                          <input type="text" class="form-control" formControlName="appName" placeholder="{{props.DATASET_DETAILS.DATASET_APP_NAME}}" maxlength="40" [ngClass]="{ 'is-invalid': submitted && f.appName.errors}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3">{{props.DATASET_DETAILS.DATASET_FILE}} <span class="text-danger">*</span></label>
+                                        <div class="col-sm-6">
+                                            <input type="file" class="form-control" formControlName="datasetFile" (change)="handleFileInput($event.target.files)" [ngClass]="{ 'is-invalid': submitted && f.datasetFile.errors}"  accept=".xls,.xlsx">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3">{{props.DATASET_DETAILS.DATASET_DESCRIPTION}} <span class="text-danger">*</span></label>
+                                        <div class="col-sm-6">
+                                            <textarea rows="5" class="form-control" formControlName="datasetDescription" placeholder="{{props.DATASET_DETAILS.DATASET_DESCRIPTION}}" maxlength="250" [ngClass]="{ 'is-invalid': submitted && f.datasetDescription.errors}"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3">{{props.DATASET_DETAILS.DATASET_STATUS}} <span class="text-danger">*</span></label>
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" formControlName="datasetStatus" value="{{props.DATASET_DETAILS.DATASET_STATUS_YES}}" [ngClass]="{ 'is-invalid': submitted && f.datasetStatus.errors}">
+                                                    <span>  {{props.DATASET_DETAILS.DATASET_STATUS_YES}}</span>
+                                                    <input type="radio" class="form-check-input" formControlName="datasetStatus" value="{{props.DATASET_DETAILS.DATASET_STATUS_NO}}" style="margin-left: 5px;" [ngClass]="{ 'is-invalid': submitted && f.datasetStatus.errors}">
+                                                    <span>  {{props.DATASET_DETAILS.DATASET_STATUS_NO}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-default pull-right" routerLink="/user-list" style="margin-left: 15px;">{{props.BTN_SEARCH.CANCEL}}</button>
+                            <button type="submit" class="btn btn-primary btn-fill pull-right" [disabled]="!this.addDatasetForm.valid" (click)="addUser()">{{props.DATASET_DETAILS.DATASET_ADD_BTN}}</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

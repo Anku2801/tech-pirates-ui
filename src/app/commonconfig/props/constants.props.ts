@@ -1,0 +1,60 @@
+export const constantsProps = {
+  APP_Name: 'CitizensNext - Data Marketplace',
+  SIDEBAR_APP_Name: 'Data Marketplace',
+  numberFormatRegex: /^[0-9]*$/i,
+  characterFormatRegex: /^[a-zA-Z\s]*$/,
+  emailFormatRegex: /^[a-z0-9.]+@[a-z]+\.[a-z]{2,3}/,
+  SERVER_CONNECTION_ERROR: 'The server encountered an unexpected condition.',
+  UNKNOWN_ERROR: 'Unable to connect the server.',
+  NOT_FOUND: 'The server could not find the requested resource.',
+  ACCESS_DENIED: 'You don\'t have permission to access requested resource.',
+  MENUS: {
+    LOGOUT: 'Logout',
+    MENU: 'MENUS',
+    LOGIN: 'Login',
+  },
+  NO_RECORDS: 'No Records Found.',
+  BTN_SEARCH: {
+    SEARCH: 'Search',
+    RESET: 'Reset',
+    CANCEL: 'Cancel'
+  },
+  USER_DETAILS: {
+    USER_LIST_PAGE_NAME: 'Users',
+    USER_ADD_PAGE_NAME: 'Add User',
+    USER_PASS: 'Password',
+    USER_NAME: 'User Name',
+    USER_EMAIL: 'Mail-ID',
+    USER_LOGIN_EMAIL: 'Email',
+    USER_MOBILE: 'Mobile Number',
+    USER_STATUS: 'Status',
+    USER_ROLE: 'User Role',
+    USER_ACTIVE: 'Active',
+    USER_INACTIVE: 'Inactive',
+    USER_ADMIN_YES: 'Admin',
+    USER_ADMIN_NO: 'User',
+    USER_ACTION: 'Action',
+    USER_ADD_BTN: 'Add User',
+    USER_UPDATE_BTN: 'Update User'
+  },
+  DATASET_DETAILS: {
+    DATASET_LIST_PAGE_NAME: 'Datasets',
+    DATASET_ADD_PAGE_NAME: 'Add Dataset',
+    DATASET_APP_NAME: 'Application Name',
+    DATASET_FILE: 'Dataset File',
+    DATASET_DESCRIPTION: 'Description',
+    DATASET_STATUS: 'Status',
+    DATASET_STATUS_YES: 'Active',
+    DATASET_STATUS_NO: 'Inactive',
+    DATASET_ADD_BTN: 'Add Dataset',
+    DATASET_UPDATE_BTN: 'Update Dataset'
+  },
+  HOME: {
+    USERS: 'User',
+    DATASET: 'Dataset',
+    RECENT_ACTIVITIES: 'Recent Activities',
+    DATASET_STATISTICS: 'Dataset Statistics',
+    ADD_BTN:'Add',
+    LIST_BTN:'List'
+  },
+}

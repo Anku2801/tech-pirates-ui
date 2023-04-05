@@ -1,0 +1,59 @@
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="content">
+                        <form id="update-user" [formGroup]="updateUserForm">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3">{{props.USER_DETAILS.USER_NAME}} <span class="text-danger">*</span></label>
+                                        <div class="col-sm-6">
+                                          <input type="text" class="form-control" formControlName="userName" placeholder="{{props.USER_DETAILS.USER_NAME}}" maxlength="40" [ngClass]="{ 'is-invalid': submitted && f.userName.errors}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3">{{props.USER_DETAILS.USER_EMAIL}} <span class="text-danger">*</span></label>
+                                        <div class="col-sm-6">
+                                          <input type="text" class="form-control" formControlName="userEmail" placeholder="abc@infosys.com" maxlength="35" [ngClass]="{ 'is-invalid': submitted && f.userEmail.errors}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3">{{props.USER_DETAILS.USER_PASS}} <span class="text-danger">*</span></label>
+                                        <div class="col-sm-6">
+                                          <input type="password" class="form-control" formControlName="userPassword" placeholder="{{props.USER_DETAILS.USER_PASS}}" maxlength="15" [ngClass]="{ 'is-invalid': submitted && f.userPassword.errors}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3">{{props.USER_DETAILS.USER_MOBILE}} <span class="text-danger">*</span></label>
+                                        <div class="col-sm-6">
+                                          <input type="text" class="form-control" formControlName="userMobileno" placeholder="+91" maxlength="35" [ngClass]="{ 'is-invalid': submitted && f.userMobileno.errors}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3">{{props.USER_DETAILS.USER_ROLE}} <span class="text-danger">*</span></label>
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" formControlName="userAdminAccess" value="{{props.USER_DETAILS.USER_ADMIN_YES}}" [ngClass]="{ 'is-invalid': submitted && f.userAdminAccess.errors}">
+                                                    <span>  {{props.USER_DETAILS.USER_ADMIN_YES}}</span>
+                                                    <input type="radio" class="form-check-input" formControlName="userAdminAccess" value="{{props.USER_DETAILS.USER_ADMIN_NO}}" style="margin-left: 5px;" [ngClass]="{ 'is-invalid': submitted && f.userAdminAccess.errors}">
+                                                    <span>  {{props.USER_DETAILS.USER_ADMIN_NO}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-default pull-right" routerLink="/user-list" style="margin-left: 15px;">{{props.BTN_SEARCH.CANCEL}}</button>
+                            <button type="submit" class="btn btn-primary btn-fill pull-right" [disabled]="!this.updateUserForm.valid" (click)="updateUser()">{{props.USER_DETAILS.USER_UPDATE_BTN}}</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
